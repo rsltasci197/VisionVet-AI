@@ -1,0 +1,16 @@
+/* postcss-ignore-next-line */
+@tailwind base;
+/* postcss-ignore-next-line */
+@tailwind components;
+/* postcss-ignore-next-line */
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
