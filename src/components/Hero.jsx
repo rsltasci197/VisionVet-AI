@@ -29,6 +29,7 @@ const Hero = () => {
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      data-aos="fade-up"
     >
       {/* Background with farm/cow image effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/95 via-green-800/90 to-blue-900/95 dark:from-gray-900/98 dark:via-emerald-900/95 dark:to-blue-900/98">
@@ -43,12 +44,12 @@ const Hero = () => {
               <span className="text-emerald-300 text-sm font-semibold">🐄 Veteriner Teknolojisinde Yeni Dönem</span>
             </div>
 
-            <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Çiftlikte dakikalar içinde{' '}
                 <span className="text-emerald-300">mastitis tanısı</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-emerald-100 font-light">
+              <p className="text-lg sm:text-xl lg:text-2xl text-emerald-100 font-light">
                 Akıllı telefon mikroskopu ve yapay zeka ile hızlı, doğru ve ekonomik tanı
               </p>
             </div>
@@ -71,63 +72,63 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 pt-8 border-t border-white/20">
               <div>
-                <div className="text-3xl lg:text-4xl font-bold text-white">%90+</div>
-                <div className="text-emerald-200 text-sm lg:text-base">Doğruluk</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">%90+</div>
+                <div className="text-emerald-200 text-xs sm:text-sm lg:text-base">Doğruluk</div>
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl font-bold text-white">&lt;5 dk</div>
-                <div className="text-emerald-200 text-sm lg:text-base">Hızlı Sonuç</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">&lt;5 dk</div>
+                <div className="text-emerald-200 text-xs sm:text-sm lg:text-base">Hızlı Sonuç</div>
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl font-bold text-white">%96</div>
-                <div className="text-emerald-200 text-sm lg:text-base">Tasarruf</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">%96</div>
+                <div className="text-emerald-200 text-xs sm:text-sm lg:text-base">Tasarruf</div>
               </div>
             </div>
           </div>
 
           {/* Right - Product Showcase */}
-          <div className="relative">
+          <div className="relative mt-12 lg:mt-0">
             {/* Main Title for Right Side */}
-            <div className="text-center mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2">Ürün</h2>
-              <p className="text-emerald-200">Çiftlik ortamında dakikalar içinde mastitis tanısı yapabilirsiniz</p>
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">Ürün</h2>
+              <p className="text-sm sm:text-base text-emerald-200 px-4">Çiftlik ortamında dakikalar içinde mastitis tanısı yapabilirsiniz</p>
             </div>
 
             {/* Phone Mockups Stack */}
-            <div className="relative h-[500px] lg:h-[600px]">
+            <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] mb-8">
               {/* Center Phone - Main Display */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
                 <div className="relative">
                   {/* Phone Frame */}
-                  <div className="w-64 h-[520px] bg-gray-900 rounded-[3rem] p-3 shadow-2xl border-8 border-gray-800">
-                    <div className="w-full h-full bg-gradient-to-br from-emerald-600 to-blue-600 rounded-[2.3rem] overflow-hidden relative">
+                  <div className="w-48 sm:w-56 lg:w-64 h-[400px] sm:h-[480px] lg:h-[520px] bg-gray-900 rounded-[2.5rem] lg:rounded-[3rem] p-2 lg:p-3 shadow-2xl border-4 lg:border-8 border-gray-800">
+                    <div className="w-full h-full bg-gradient-to-br from-emerald-600 to-blue-600 rounded-[1.8rem] lg:rounded-[2.3rem] overflow-hidden relative">
                       {/* Screen Content */}
-                      <div className="p-6 text-white">
-                        <div className="text-sm opacity-75 mb-2">Akıllı Telefon Mikroskobu</div>
-                        <h3 className="text-2xl font-bold mb-4">Dashboard</h3>
+                      <div className="p-4 sm:p-5 lg:p-6 text-white">
+                        <div className="text-xs sm:text-sm opacity-75 mb-2">Akıllı Telefon Mikroskobu</div>
+                        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Dashboard</h3>
                         
                         {/* Sample UI Elements */}
-                        <div className="space-y-3 mb-6">
-                          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                        <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-3">
                             <div className="flex items-center justify-between">
-                              <span className="text-sm">Son Test</span>
-                              <span className="font-semibold">5 dk önce</span>
+                              <span className="text-xs sm:text-sm">Son Test</span>
+                              <span className="font-semibold text-xs sm:text-base">5 dk önce</span>
                             </div>
                           </div>
-                          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-3">
                             <div className="flex items-center justify-between">
-                              <span className="text-sm">Doğruluk</span>
-                              <span className="font-semibold">%94.2</span>
+                              <span className="text-xs sm:text-sm">Doğruluk</span>
+                              <span className="font-semibold text-xs sm:text-base">%94.2</span>
                             </div>
                           </div>
                         </div>
 
                         {/* Chart Representation */}
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 mb-3 sm:mb-4">
                           <div className="text-xs mb-2">Bakteriyel Analiz</div>
-                          <div className="flex items-end space-x-2 h-24">
+                          <div className="flex items-end space-x-2 h-16 sm:h-20 lg:h-24">
                             <div className="flex-1 bg-yellow-400 rounded-t" style={{height: '60%'}}></div>
                             <div className="flex-1 bg-red-400 rounded-t" style={{height: '80%'}}></div>
                             <div className="flex-1 bg-blue-400 rounded-t" style={{height: '40%'}}></div>
@@ -135,25 +136,25 @@ const Hero = () => {
                           </div>
                         </div>
 
-                        <button className="w-full bg-white text-emerald-600 font-semibold py-3 rounded-xl">
+                        <button className="w-full bg-white text-emerald-600 font-semibold py-2 sm:py-3 rounded-xl text-xs sm:text-base">
                           Yeni Test Başlat
                         </button>
                       </div>
                     </div>
                   </div>
                   {/* Notch */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-2xl"></div>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-4 sm:h-5 lg:h-6 bg-gray-900 rounded-b-2xl"></div>
                 </div>
               </div>
 
-              {/* Left Phone - Analysis History */}
-              <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20 opacity-75 hover:opacity-100 transition-opacity">
-                <div className="w-48 h-96 bg-gray-900 rounded-[2.5rem] p-2 shadow-xl border-4 border-gray-800 transform rotate-[-5deg]">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 rounded-[2rem] p-4">
-                    <div className="text-white text-sm font-semibold mb-2">Test Geçmişi</div>
+              {/* Left Phone - Analysis History - Hidden on mobile */}
+              <div className="hidden sm:block absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 z-20 opacity-75 hover:opacity-100 transition-opacity">
+                <div className="w-36 sm:w-40 lg:w-48 h-72 sm:h-80 lg:h-96 bg-gray-900 rounded-[2rem] lg:rounded-[2.5rem] p-2 shadow-xl border-4 border-gray-800 transform rotate-[-5deg]">
+                  <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 rounded-[1.5rem] lg:rounded-[2rem] p-3 sm:p-4">
+                    <div className="text-white text-xs sm:text-sm font-semibold mb-2">Test Geçmişi</div>
                     <div className="space-y-2">
                       {[1,2,3,4,5].map(i => (
-                        <div key={i} className="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-xs text-white">
+                        <div key={i} className="bg-white/20 backdrop-blur-sm rounded-lg p-1.5 sm:p-2 text-xs text-white">
                           Test #{i}
                         </div>
                       ))}
@@ -162,14 +163,14 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Right Phone - Disease Detection */}
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20 opacity-75 hover:opacity-100 transition-opacity">
-                <div className="w-48 h-96 bg-gray-900 rounded-[2.5rem] p-2 shadow-xl border-4 border-gray-800 transform rotate-[5deg]">
-                  <div className="w-full h-full bg-gradient-to-br from-emerald-500 to-green-600 rounded-[2rem] p-4">
-                    <div className="text-white text-sm font-semibold mb-2">Hastalık Tespiti</div>
-                    <div className="bg-white/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+              {/* Right Phone - Disease Detection - Hidden on mobile */}
+              <div className="hidden sm:block absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 z-20 opacity-75 hover:opacity-100 transition-opacity">
+                <div className="w-36 sm:w-40 lg:w-48 h-72 sm:h-80 lg:h-96 bg-gray-900 rounded-[2rem] lg:rounded-[2.5rem] p-2 shadow-xl border-4 border-gray-800 transform rotate-[5deg]">
+                  <div className="w-full h-full bg-gradient-to-br from-emerald-500 to-green-600 rounded-[1.5rem] lg:rounded-[2rem] p-3 sm:p-4">
+                    <div className="text-white text-xs sm:text-sm font-semibold mb-2">Hastalık Tespiti</div>
+                    <div className="bg-white/30 backdrop-blur-sm rounded-lg p-2 sm:p-3 mb-2 sm:mb-3">
                       <div className="text-white text-xs">Mastitis Detected</div>
-                      <div className="text-2xl font-bold text-white mt-1">Pozitif</div>
+                      <div className="text-xl sm:text-2xl font-bold text-white mt-1">Pozitif</div>
                     </div>
                     <div className="space-y-1 text-xs text-white/90">
                       <div>• Bakteriyel sayım yüksek</div>

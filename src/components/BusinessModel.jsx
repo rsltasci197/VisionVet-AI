@@ -49,20 +49,20 @@ const BusinessModel = () => {
   ];
 
   return (
-    <section id="business" className="py-20 lg:py-32 bg-white dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-500">
+    <section id="business" className="py-20 lg:py-32 bg-white dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-500" data-aos="fade-right">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             İş <span className="text-emerald-600 dark:text-emerald-400">Modeli</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300">
             Çeşitli iş modellerimiz ile her ölçekten işletmeye uygun çözümler sunuyoruz
           </p>
         </div>
 
         {/* Business Models */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {models.map((model, index) => {
             const Icon = model.icon;
             return (
@@ -81,7 +81,7 @@ const BusinessModel = () => {
                 )}
 
                 <div
-                  className={`h-full bg-gray-50 dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 hover:bg-white dark:hover:bg-gray-700/50 hover:shadow-2xl transition-all duration-300 border-2 ${
+                  className={`h-full bg-gray-50 dark:bg-gray-800/50 backdrop-blur-lg rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 hover:bg-white dark:hover:bg-gray-700/50 hover:shadow-2xl transition-all duration-300 border-2 ${
                     model.highlight
                       ? 'border-emerald-500 dark:border-emerald-600 shadow-xl'
                       : 'border-gray-200 dark:border-gray-700/50 hover:border-emerald-300 dark:hover:border-emerald-700'
@@ -89,13 +89,13 @@ const BusinessModel = () => {
                 >
                   {/* Icon */}
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${model.color} rounded-xl flex items-center justify-center mb-6 shadow-lg`}
+                    className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${model.color} rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                     {model.title}
                   </h3>
                   <p className="text-emerald-600 font-semibold mb-6">
@@ -143,13 +143,13 @@ const BusinessModel = () => {
         </div>
 
         {/* Revenue Streams */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 lg:p-12 shadow-2xl">
-          <h3 className="text-3xl font-bold text-white mb-8 text-center">
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
             Gelir Akışları
           </h3>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-emerald-400">40%</div>
+              <div className="text-3xl sm:text-4xl font-bold text-emerald-400">40%</div>
               <div className="text-white font-semibold">Turn-Key Satış</div>
               <div className="text-gray-400 text-sm">İlk kurulum gelirleri</div>
             </div>

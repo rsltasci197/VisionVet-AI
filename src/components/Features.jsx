@@ -42,38 +42,38 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 lg:py-32 bg-white dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-500">
+    <section id="features" className="py-20 lg:py-32 bg-white dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-500" data-aos="fade-up" data-aos-delay="100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Ürün <span className="text-emerald-600 dark:text-emerald-400">Özellikleri</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">
             VisionVet-AI'ın Teknik Yetenekleri
           </p>
-          <p className="text-lg text-gray-500 dark:text-gray-400">
+          <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400">
             Son teknoloji yapay zeka ve mobil mikroskopi teknolojilerini bir araya getiren 
             VisionVet-AI, veteriner tanı süreçlerinde devrim yaratıyor.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="group relative bg-gray-50 dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 hover:bg-white dark:hover:bg-gray-700/50 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700/50"
+                className="group relative bg-gray-50 dark:bg-gray-800/50 backdrop-blur-lg rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 hover:bg-white dark:hover:bg-gray-700/50 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700/50"
               >
                 {/* Icon */}
-                <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-7 h-7 text-white" />
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${feature.color} rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   {feature.title}
                 </h3>
 
@@ -90,10 +90,10 @@ const Features = () => {
         </div>
 
         {/* Technical Specs */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 lg:p-12 shadow-2xl">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="text-white space-y-6">
-              <h3 className="text-3xl font-bold">
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+            <div className="text-white space-y-4 sm:space-y-6">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">
                 Teknik Spesifikasyonlar
               </h3>
               <div className="space-y-4">

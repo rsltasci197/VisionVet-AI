@@ -21,21 +21,25 @@ const Comparison = () => {
   ];
 
   return (
-    <section id="comparison" className="py-20 lg:py-32 bg-white dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-500">
+    <section 
+      id="comparison" 
+      className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500"
+      data-aos="zoom-in"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 leading-tight">
             <span className="text-red-600 dark:text-red-400">Eski Yöntem</span> vs{' '}
             <span className="text-emerald-600 dark:text-emerald-400">Yeni Yöntem</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-sm sm:text-base lg:text-xl text-gray-600 dark:text-gray-300 px-2">
             Geleneksel laboratuvar testleri ile VisionVet-AI arasındaki farkı görün
           </p>
         </div>
 
         {/* Comparison Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto relative">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto relative">
           {/* Arrow in the middle - desktop only */}
           <div className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
             <div className="bg-gradient-to-r from-red-600 to-emerald-600 p-4 rounded-full shadow-xl">
@@ -45,31 +49,31 @@ const Comparison = () => {
 
           {/* Old Method */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/30 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-red-200 dark:border-red-700/50">
-              <div className="text-center mb-8">
-                <div className="inline-block bg-red-600 dark:bg-red-700 text-white px-6 py-3 rounded-full font-bold text-lg mb-4">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border-2 border-red-200 dark:border-red-700/50">
+              <div className="text-center mb-6 sm:mb-8">
+                <div className="inline-block bg-red-600 dark:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base lg:text-lg mb-3 sm:mb-4">
                   Geleneksel Yöntem
                 </div>
-                <p className="text-gray-700 dark:text-gray-300">Laboratuvar Tabanlı Test</p>
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">Laboratuvar Tabanlı Test</p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {oldMethod.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 flex items-center justify-between shadow-sm border border-gray-200/50 dark:border-gray-700/50"
+                    className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-3 sm:p-4 flex items-center justify-between shadow-sm border border-gray-200/50 dark:border-gray-700/50 gap-2"
                   >
-                    <div className="flex items-center space-x-3">
-                      <X className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">{item.label}</span>
+                    <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
+                      <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 dark:text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-medium truncate">{item.label}</span>
                     </div>
-                    <span className="text-red-600 dark:text-red-400 font-bold">{item.value}</span>
+                    <span className="text-xs sm:text-sm text-red-600 dark:text-red-400 font-bold whitespace-nowrap">{item.value}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 p-4 bg-red-200 rounded-lg">
-                <p className="text-red-900 text-sm font-semibold text-center">
+              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-red-200 dark:bg-red-800/30 rounded-lg">
+                <p className="text-red-900 dark:text-red-200 text-xs sm:text-sm font-semibold text-center">
                   ⚠️ Yavaş, pahalı ve zaman kaybettirici
                 </p>
               </div>
@@ -78,7 +82,7 @@ const Comparison = () => {
 
           {/* New Method */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-emerald-200 dark:border-emerald-700/50">
+            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-blue-900/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border-2 border-emerald-200 dark:border-emerald-700/50">
               <div className="text-center mb-8">
                 <div className="inline-block bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-6 py-3 rounded-full font-bold text-lg mb-4">
                   VisionVet-AI
@@ -90,19 +94,19 @@ const Comparison = () => {
                 {newMethod.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 flex items-center justify-between shadow-sm border border-gray-200/50 dark:border-gray-700/50"
+                    className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-3 sm:p-4 flex items-center justify-between shadow-sm border border-gray-200/50 dark:border-gray-700/50 gap-2"
                   >
-                    <div className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">{item.label}</span>
+                    <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-medium truncate">{item.label}</span>
                     </div>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">{item.value}</span>
+                    <span className="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 font-bold whitespace-nowrap">{item.value}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 p-4 bg-emerald-200 rounded-lg">
-                <p className="text-emerald-900 text-sm font-semibold text-center">
+              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-emerald-200 dark:bg-emerald-800/30 rounded-lg">
+                <p className="text-emerald-900 dark:text-emerald-200 text-xs sm:text-sm font-semibold text-center">
                   ✓ Hızlı, ekonomik ve etkili çözüm
                 </p>
               </div>
@@ -118,18 +122,18 @@ const Comparison = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-emerald-600 to-blue-600 text-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-4xl font-bold mb-2">%96</div>
-            <div className="text-emerald-100">Maliyet Tasarrufu</div>
+        <div className="mt-12 sm:mt-16 grid sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-emerald-600 to-blue-600 text-white p-4 sm:p-5 lg:p-6 rounded-lg sm:rounded-xl shadow-lg text-center">
+            <div className="text-3xl sm:text-4xl font-bold mb-1.5 sm:mb-2">%96</div>
+            <div className="text-sm sm:text-base text-emerald-100">Maliyet Tasarrufu</div>
           </div>
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-4xl font-bold mb-2">95%</div>
-            <div className="text-blue-100">Daha Hızlı</div>
+          <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-4 sm:p-5 lg:p-6 rounded-lg sm:rounded-xl shadow-lg text-center">
+            <div className="text-3xl sm:text-4xl font-bold mb-1.5 sm:mb-2">95%</div>
+            <div className="text-sm sm:text-base text-blue-100">Daha Hızlı</div>
           </div>
-          <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-4xl font-bold mb-2">%96</div>
-            <div className="text-purple-100">Doğruluk Oranı</div>
+          <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white p-4 sm:p-5 lg:p-6 rounded-lg sm:rounded-xl shadow-lg text-center">
+            <div className="text-3xl sm:text-4xl font-bold mb-1.5 sm:mb-2">%96</div>
+            <div className="text-sm sm:text-base text-purple-100">Doğruluk Oranı</div>
           </div>
         </div>
         

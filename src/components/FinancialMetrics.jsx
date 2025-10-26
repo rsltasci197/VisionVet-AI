@@ -42,7 +42,7 @@ const FinancialMetrics = () => {
   ];
 
   return (
-    <section id="financials" className="py-20 lg:py-32 bg-gradient-to-br from-emerald-600 via-blue-600 to-purple-600 relative overflow-hidden">
+    <section id="financials" className="py-20 lg:py-32 bg-gradient-to-br from-emerald-600 via-blue-600 to-purple-600 relative overflow-hidden" data-aos="fade-up" data-aos-delay="150">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -53,17 +53,17 @@ const FinancialMetrics = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2">
             Finansal <span className="text-emerald-200">Göstergeler</span>
           </h2>
-          <p className="text-xl text-white/90">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 px-2">
             Güçlü finansal metrikler ile sürdürülebilir büyüme
           </p>
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
           {metrics.map((metric, index) => {
             const Icon = metric.icon;
             return (
@@ -71,29 +71,29 @@ const FinancialMetrics = () => {
                 key={index}
                 className="group relative"
               >
-                <div className="h-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-2 shadow-xl">
+                <div className="h-full bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-2 shadow-xl">
                   {/* Icon */}
-                  <div className={`w-14 h-14 bg-gradient-to-br ${metric.color} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
-                    <Icon className="w-7 h-7 text-white" />
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-br ${metric.color} rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg`}>
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-white" />
                   </div>
 
                   {/* Abbreviation */}
-                  <div className="text-emerald-200 font-semibold mb-2">
+                  <div className="text-xs sm:text-sm text-emerald-200 font-semibold mb-1.5 sm:mb-2">
                     {metric.abbreviation}
                   </div>
 
                   {/* Value */}
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-3">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 sm:mb-3 break-words">
                     {metric.value}
                   </div>
 
                   {/* Label */}
-                  <div className="text-white/80 font-medium mb-3">
+                  <div className="text-sm sm:text-base text-white/80 font-medium mb-2 sm:mb-3 leading-tight">
                     {metric.label}
                   </div>
 
                   {/* Description */}
-                  <p className="text-white/70 text-sm leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-white/70 leading-relaxed mb-3 sm:mb-4">
                     {metric.description}
                   </p>
 

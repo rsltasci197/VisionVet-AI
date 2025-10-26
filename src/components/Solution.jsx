@@ -23,7 +23,7 @@ const Solution = () => {
   ];
 
   return (
-    <section id="solution" className="relative py-20 bg-gradient-to-br from-cyan-50 via-blue-50 to-emerald-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-emerald-900/20 transition-colors duration-500 overflow-hidden">
+    <section id="solution" className="relative py-20 bg-gradient-to-br from-cyan-50 via-blue-50 to-emerald-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-emerald-900/20 transition-colors duration-500 overflow-hidden" data-aos="fade-left">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
       </div>
@@ -31,23 +31,23 @@ const Solution = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-blue-900 dark:text-blue-300 mb-12">Çözüm</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-blue-900 dark:text-blue-300 mb-8 sm:mb-12">Çözüm</h2>
 
             <div className="space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-6 border border-blue-200 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold">{feature.number}</div>
+                <div key={index} className="flex items-start space-x-3 sm:space-x-4 lg:space-x-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 border border-blue-200 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-lg sm:text-xl lg:text-2xl font-bold">{feature.number}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-700 dark:text-gray-300 mb-1">{feature.description}</p>
-                    <p className="text-sm text-blue-600 dark:text-blue-400">{feature.detail}</p>
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-1">{feature.description}</p>
+                    <p className="text-xs sm:text-sm text-blue-600 dark:text-blue-400">{feature.detail}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12">
-              <div className="grid grid-cols-4 gap-4">
+            <div className="mt-8 sm:mt-10 lg:mt-12">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                 {sdgGoals.map((goal, index) => (
                   <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:scale-110 transition-transform cursor-pointer">
                     <img 
