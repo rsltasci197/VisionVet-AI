@@ -19,17 +19,32 @@ import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   useEffect(() => {
-    // Initialize AOS
+    // Initialize AOS with mobile-responsive settings
     AOS.init({
-      duration: 1000,
+      duration: 800, // Daha hızlı animasyon mobil için
       easing: 'ease-out-cubic',
       once: true,
-      offset: 100,
-      delay: 100,
+      offset: 50, // Mobilde daha erken başlasın
+      delay: 50,
+      disable: false, // Mobilde de aktif
+      startEvent: 'DOMContentLoaded',
+      animatedClassName: 'aos-animate',
+      // Mobil cihazlarda performans için
+      useClassNames: false,
+      disableMutationObserver: false,
+      throttleDelay: 99,
+      debounceDelay: 50,
+      // Mobilde daha hassas
+      anchorPlacement: 'top-bottom',
     });
 
-    // Refresh AOS on route change
-    AOS.refresh();
+    // Refresh on resize for responsive
+    const handleResize = () => AOS.refresh();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (

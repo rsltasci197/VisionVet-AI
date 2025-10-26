@@ -8,9 +8,60 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Mobilde over-scroll efektini devre dışı bırak */
+    overscroll-behavior: none;
+    /* WebKit tabanlı tarayıcılar için smooth scroll */
+    -webkit-overflow-scrolling: touch;
   }
   
   body {
     transition: background-color 0.3s ease, color 0.3s ease;
+    /* Mobilde metin seçimini optimize et */
+    -webkit-tap-highlight-color: transparent;
+    /* Mobilde yatay scroll'u engelle */
+    overflow-x: hidden;
+  }
+
+  /* Mobilde touch için optimize edilmiş geçişler */
+  @media (max-width: 768px) {
+    * {
+      /* Touch cihazlarda daha hızlı animasyon */
+      animation-duration: 0.6s !important;
+    }
+  }
+
+  /* Reduced motion tercih edenleri için */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* AOS animasyonlarını mobilde optimize et */
+@layer utilities {
+  [data-aos] {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media (max-width: 640px) {
+    [data-aos] {
+      /* Mobilde daha kısa animasyon süresi */
+      transition-duration: 600ms !important;
+    }
+  }
+
+  /* Hover efektlerini sadece pointer cihazlarda etkinleştir */
+  @media (hover: none) and (pointer: coarse) {
+    .hover\:scale-105:hover,
+    .hover\:scale-110:hover,
+    .group:hover .group-hover\:scale-110 {
+      transform: scale(1);
+    }
   }
 }
